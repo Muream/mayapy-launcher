@@ -5,6 +5,8 @@ It lets you easily launch any version of mayapy without having any of them in yo
 
 ## Installation
 
+> ⚠️ mayapy-launcher is a Windows  only tool at this point as it uses the registry to find the maya install location.
+
 ### Using pipx
 
 ```console
