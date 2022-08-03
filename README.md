@@ -32,7 +32,7 @@ mayapy
 
 When called without a specific version number the version is resolved in this order:
 
-1. If a virtualenv is currently active, the Launcher will check `python --version` and use the most relevant interpreter [^1].
+1. If a virtualenv is currently active, the Launcher will check the `python --version` and use the most mayapy relevant interpreter [^1].
 
 2. The Launcher will look for a `.maya-version` file in all parent directories and use the first version it specifies
 
@@ -47,10 +47,6 @@ When called without a specific version number the version is resolved in this or
     # .python-version
     3.9.7
     ```
-
-    The Interpreter **MUST** share the same major version.
-    Only interpreters with the same or greater minor version are considered.  
-    This means that python2 interpreters will never be run
 
 4. latest installed version will automatically be used.
 
