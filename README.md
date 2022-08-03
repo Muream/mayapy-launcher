@@ -1,6 +1,6 @@
 # Mayapy Launcher
 
-Mayapy Launcher is a launcher similar to the Py Launcher on windows but for mayapy.
+Mayapy Launcher is a launcher similar to the Py Launcher on windows but for mayapy.  
 It lets you easily launch any version of mayapy without having any of them in your PATH.
 
 ## Installation
@@ -10,6 +10,13 @@ It lets you easily launch any version of mayapy without having any of them in yo
 ```console
 pipx install mayapy-launcher
 ```
+
+### Or just pip
+
+```console
+pip install mayapy-launcher
+```
+
 
 ## Usage
 
@@ -23,7 +30,7 @@ mayapy
 
 When called without a specific version number the version is resolved in this order:
 
-1. The Launcher will check `python --version` and use the most relevant interpreter [^1].
+1. If a virtualenv is currently active, the Launcher will check `python --version` and use the most relevant interpreter [^1].
 
 2. The Launcher will look for a `.maya-version` file in all parent directories and use the first version it specifies
 
