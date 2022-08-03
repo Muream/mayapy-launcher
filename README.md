@@ -23,18 +23,16 @@ mayapy
 
 When called without a specific version number the version is resolved in this order:
 
-1. When running a script directly, the Launcher checks for any shebang line and will use the most relevant interpreter[^1].
+1. The Launcher will check `python --version` and use the most relevant interpreter [^1].
 
-2. The Launcher will check `python --version` and use the most relevant interpreter [^1].
-
-3. The Launcher will look for a `.maya-version` file in all parent directories and use the first version it specifies
+2. The Launcher will look for a `.maya-version` file in all parent directories and use the first version it specifies
 
     ```plaintext
     # .mayapy-version
     2023
     ```
 
-4. The Launcher will look for a `.python-version` file in all parent directories and match the first python version with the most relevant mayapy version[^1].  
+3. The Launcher will look for a `.python-version` file in all parent directories and match the first python version with the most relevant mayapy version[^1].  
 
     ```plaintext
     # .python-version
@@ -45,7 +43,7 @@ When called without a specific version number the version is resolved in this or
     Only interpreters with the same or greater minor version are considered.  
     This means that python2 interpreters will never be run
 
-5. latest installed version will automatically be used.
+4. latest installed version will automatically be used.
 
 
 ### Run a specific version

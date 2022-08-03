@@ -143,11 +143,6 @@ def latest_maya_version() -> int:
     return max(installed_maya_versions())
 
 
-def py_version_from_shebang() -> Version | None:
-    """Return the python version from the script's shebang line"""
-    return
-
-
 def py_version_from_virtualenv() -> Version | None:
     """Return the python version of the currently activated virtualenv."""
 
@@ -217,7 +212,6 @@ def resolve_version() -> int | None:
     maya_version = None
 
     py_version_resolvers: list[Callable[[], Version | None]] = [
-        py_version_from_shebang,
         py_version_from_virtualenv,
         py_version_from_python_version,
     ]
