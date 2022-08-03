@@ -35,7 +35,7 @@ When called without a specific version number the version is resolved in this or
 2. The Launcher will look for a `.maya-version` file in all parent directories and use the first version it specifies
 
     ```plaintext
-    # .mayapy-version
+    # .maya-version
     2023
     ```
 
